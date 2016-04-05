@@ -1,0 +1,1 @@
+define(["backbone","views/tripView"],function(e,i){tripView=new i});

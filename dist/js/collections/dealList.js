@@ -1,0 +1,1 @@
+define(["backbone","models/deal"],function(t,e){var n=t.Collection.extend({model:e,addDeal:function(t){var n=new e({deal:t});this.add(n)},getCheapest:function(){var t=null;return this.each(function(e){(null==t||e.getCost()<t.getCost())&&(t=e)}),t},getFastest:function(){var t=null;return this.each(function(e){(null==t||e.getDuration()<t.getDuration())&&(t=e)}),t}});return n});
