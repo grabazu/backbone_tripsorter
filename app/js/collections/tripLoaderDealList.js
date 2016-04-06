@@ -4,8 +4,8 @@ define([
 ], function(
 	Backbone
 ){
-	var TripServiceList = Backbone.Collection.extend({ 
-		url:"datas/response.json",
+	var TripLoaderDealList = Backbone.Collection.extend({ 
+		url:"../datas/response.json",
 		
 		getDeals : function(){
 			var deals = this.fetch().success(function(data){
@@ -14,5 +14,5 @@ define([
 			return deals ;
 		}
 	}) ;
-	return TripServiceList ;
+	return TripLoaderDealList ;
 });

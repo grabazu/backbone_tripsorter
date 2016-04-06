@@ -13,7 +13,7 @@ define([
 			this.add(newDeal);
 		},
 		
-		// Return the cheapest collection item
+		// Return the cheapest item in collection
 		getCheapest : function(){
 			var cheapest = null ;
 			this.each(function(deal){
@@ -24,7 +24,7 @@ define([
 			return cheapest ;
 		},
 		
-		// Return the fastest collection item
+		// Return the fastest item in collection
 		getFastest : function(){
 			var fastest = null ;
 			this.each(function(deal){

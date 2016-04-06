@@ -10,6 +10,5 @@
 		"underscore" : "~1.8.0", 
 		"requirejs" : "~2.2.0",
 		"text" : "~2.0.0"
-		"jasmine" : "~2.4.0"
 	}
 }

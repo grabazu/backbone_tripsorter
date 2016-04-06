@@ -1,12 +1,12 @@
 
 define([
 	'backbone',
-	'models/tripService',
+	'models/loader',
 	"text!templates/tripSelect.html",
 	"text!templates/tripResponse.html"
 ], function(
 	Backbone,
-	TripService,
+	TripLoader,
 	TripSelect,
 	TripResponse
 ){
@@ -23,7 +23,7 @@ define([
 		template : null,
 		initialize : function(){
 			that = this ;
-			this.service = new TripService();
+			this.service = new TripLoader();
 			this.service.on("change:ready", function(){ 
 				that.departures = that.service.getCities().toJSON() ;
 				that.showSelectTrip();

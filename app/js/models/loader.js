@@ -4,7 +4,7 @@ define([
 	'models/destination',
 	'models/deal',
 	'collections/cityList',
-	'collections/tripServiceDealList'
+	'collections/tripLoaderDealList'
 ], function(
 	Backbone,
 	City,
@@ -14,7 +14,7 @@ define([
 	TripServiceDealList
 ){
 	
-	var tripService = Backbone.Model.extend({ 
+	var Loader = Backbone.Model.extend({ 
 		defaults : {
 			ready : false,
 		},
@@ -49,7 +49,10 @@ define([
 		},
 		getTrip : function(departure, arrival, tripMode){
 			return this.get('cities').getTrip(departure, arrival, tripMode) ;
+		},
+		getReady : function(){
+			return this.get('ready') ;
 		}
 	}) ;
-	return tripService ;
+	return Loader ;
 });

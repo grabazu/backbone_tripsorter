@@ -18,8 +18,8 @@ js/models/trip.js
 js/collections/cityList.js
 js/models/city.js
 js/models/destination.js
-js/collections/tripServiceDealList.js
-js/models/tripService.js
+js/collections/tripLoaderDealList.js
+js/models/loader.js
 js/bower_components/text/text.js
 text!templates/tripSelect.html
 text!templates/tripResponse.html
