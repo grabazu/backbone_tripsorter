@@ -11,7 +11,7 @@ define([
 	Destination,
 	Deal,
 	CityList,
-	TripServiceDealList
+	TripLoaderDealList
 ){
 	
 	var Loader = Backbone.Model.extend({ 
@@ -21,7 +21,7 @@ define([
 		initialize : function(){
 			var that = this ;
 			var cities = new CityList() ;
-			var deals = new TripServiceDealList();
+			var deals = new TripLoaderDealList();
 			
 			// Load deals from json file
 			deals.getDeals().success(function(data){ 
