@@ -1,0 +1,28 @@
+
+
+<div class="title">TripSorter</div>
+<% if (json.steps.length > 0) { %>
+	<div class="steps">
+	<% for (i = 1 ; i < json.steps.length ; i++) { %>
+		<p>
+			<span class="label left"><b><%= json.steps[i-1].name %>&nbsp;>&nbsp;<%= json.steps[i].name %></b></span>
+			<span class="cost right"><%= json.steps[i].cost %>Eur</span>
+			<span class="transport">
+				<br/><b><%= json.steps[i].transport %></b>
+				<%= json.steps[i].reference + ' ' + json.steps[i].hours + 'h' + json.steps[i].minutes %>
+			</span>
+		</p>
+	<% } %>
+	</div>
+	<p class="total">
+		<span class="left">Total</span>
+		<span><%= json.duration %></span>
+		<span class="right"><%= json.cost %> Eur</span>
+	</p>
+	<p><input type="button" id="reset" class="btn" value="Reset"/></p>
+<% } %>
+	
+	
+	
+	
+

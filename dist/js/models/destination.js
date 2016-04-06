@@ -1,0 +1,1 @@
+define(["backbone","models/city","collections/dealList"],function(e,t,n){var i=t.extend({initialize:function(){this.set("deals",new n)},addDeal:function(e){this.get("deals").addDeal(e)},setComing:function(e){this.set("coming",e)},getFastest:function(){return this.get("deals").getFastest()},getCheapest:function(){return this.get("deals").getCheapest()}});return i});

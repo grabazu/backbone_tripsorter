@@ -1,0 +1,14 @@
+{
+	"name" : "tripSorter",
+	"version" : "1.0.0",
+	"authors" : [
+		"Nicolas B"
+	],
+	"dependencies": {
+		"jquery" : "~2.1.0", 
+		"backbone" : "~1.3.0",
+		"underscore" : "~1.8.0", 
+		"requirejs" : "~2.2.0",
+		"text" : "~2.0.0"
+	}
+}
