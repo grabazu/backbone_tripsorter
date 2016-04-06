@@ -15,13 +15,16 @@ define([
 			isBad : false,
 			relevance:null,
 		},
+		
 		initialize : function(){
 			this.set('steps', new Backbone.Collection()) ;
 			this.get('steps').add(this.get('departure')) ;
 		},
+		
 		getCurrentStep : function(){
 			return this.get('steps').at(this.get('steps').length-1) ;
 		},
+		
 		matching : function(maxRelevance){
 			if (maxRelevance == null || this.get('relevance') < maxRelevance){
 				if (this.getCurrentStep().getName() === this.get('arrival').getName()) {
@@ -33,17 +36,20 @@ define([
 				this.set('isBad', true) ;
 			}
 		},
+		
 		getTraveled : function(){
 			return this.get('steps').filter(function(item) {
 				return item ;
 			});
 		},
+		
 		setTraveled : function(steps){
 			that = this ;
 			_.each(steps, function(step){
 				that.get('steps').add(step) ;
 			});
 		},
+		
 		isLoop : function(step){
 			var result = this.get('steps').find(function(model) {
 				return model.getName() === step.getName();
@@ -57,6 +63,7 @@ define([
 		isBad : function(){
 			return this.get('isBad') ;
 		},
+		
 		addStep : function(step, tripMode){
 			if(this.isLoop(step)){
 				this.set('isBad', true);
@@ -78,9 +85,11 @@ define([
 			}
 			this.set('relevance', this.get('relevance') + toAdd);
 		},
+		
 		getRelevance : function(){
 			return this.get('relevance') ;
 		},
+		
 		getSteps : function(){
 			return this.get('steps');
 		},
